@@ -70,11 +70,12 @@ Add additional notes about how to deploy this on a live system
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning.
+We use Github for versioning.
 
 ## Authors
 
 * **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
+* **Aditya Pande** - *Code Developmeent* - (https://github.com/aditya2133)
 
 ## License
 
@@ -87,5 +88,4 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
-# IMS-Start
-# IMS-Start
+
