@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.qa.ims.persistence.dao.ItemDAO;
+
 import com.qa.ims.persistence.domain.Item;
 import com.qa.ims.utils.Utils;
 
@@ -38,7 +39,7 @@ public class ItemController implements CrudController<Item> {
 		LOGGER.info("Please enter a price");
 		Double price = utils.getDouble();
 		Item item = itemDAO.create(new Item(itemName, price));
-		LOGGER.info("Customer created");
+		LOGGER.info("Item created");
 		return item;
 		
 	}
