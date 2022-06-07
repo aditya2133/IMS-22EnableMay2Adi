@@ -43,7 +43,7 @@ public class ItemOrdersController implements CrudController<ItemOrders> {
 		LOGGER.info("Please enter quantity for said item");
 		Long itemQuantity = utils.getLong();
 		ItemOrders ito = itoDAO.create(new ItemOrders(orderId, itemId, itemQuantity));
-		LOGGER.info("Customer created");
+		LOGGER.info("Order Updated");
 		return ito;
 	}
 
@@ -56,7 +56,7 @@ public class ItemOrdersController implements CrudController<ItemOrders> {
 		Long itemQuantity = utils.getLong();
 		
 		ItemOrders ito = itoDAO.update(new ItemOrders(orderItemId, itemQuantity));
-		LOGGER.info("Customer Updated");
+		LOGGER.info("Order Updated");
 		return ito;
 	}
 
