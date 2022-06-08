@@ -49,7 +49,7 @@ public class ItemOrdersController implements CrudController<ItemOrders> {
 
 	@Override
 	public ItemOrders update() {
-		LOGGER.info("Please enter the orderitems id you would like to update");
+		LOGGER.info("Please enter the order id you would like to update");
 		Long orderItemId = utils.getLong();
 		
 		LOGGER.info("Please enter a new quantity");
