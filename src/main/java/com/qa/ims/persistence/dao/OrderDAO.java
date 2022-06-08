@@ -23,7 +23,7 @@ public class OrderDAO implements Dao<Order> {
 	public Order modelFromResultSet(ResultSet resultSet) throws SQLException {
 		Long orderId = resultSet.getLong("order_id");
 		Long customerId = resultSet.getLong("customer_id");
-		return new Order(orderId, customerId);
+		return new Order(orderId, customerId); 
 	}
 
 	@Override
@@ -46,7 +46,7 @@ public class OrderDAO implements Dao<Order> {
 	@Override
 	public Order read(Long orderId) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
-				PreparedStatement statement = connection.prepareStatement("SELECT * FROM orders o JOIN order_items oi ON o.order_id = oi.order_id WHERE order_id = ?");) {
+				PreparedStatement statement = connection.prepareStatement("SELECT * FROM orders JOIN order_items ON orders.order_id = order_items.order_id WHERE order_id = ?");) {
 			statement.setLong(1, orderId);
 			try (ResultSet resultSet = statement.executeQuery();) {
 				resultSet.next();
