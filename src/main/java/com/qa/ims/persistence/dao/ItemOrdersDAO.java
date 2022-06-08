@@ -96,9 +96,11 @@ public class ItemOrdersDAO implements Dao<ItemOrders>{
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				PreparedStatement statement = connection
 						.prepareStatement("UPDATE order_items SET item_quantity = ? WHERE orderitems_id = ?");) {
+			
 			statement.setLong(1, itemorders.getItemQuantity());
+			statement.setLong(2, itemorders.getOrderItemId());
 			statement.executeUpdate();
-			return read(itemorders.getOrderId());
+//			return read(itemorders.getOrderId());
 		} catch (Exception e) {
 			LOGGER.debug(e);
 			LOGGER.error(e.getMessage());

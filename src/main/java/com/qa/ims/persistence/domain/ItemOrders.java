@@ -15,11 +15,11 @@ public class ItemOrders {
 	}
 
 
-	public ItemOrders(Long orderId, Long itemId, Long itemQuantity2) {
+	public ItemOrders(Long orderId, Long itemId, Long itemQuantity) {
 		super();
 		this.orderId = orderId;
 		this.itemId = itemId;
-		this.itemQuantity = itemQuantity2;
+		this.itemQuantity = itemQuantity;
 	}
 
 
@@ -34,6 +34,10 @@ public class ItemOrders {
 
 	public ItemOrders(Long orderItemId, Long itemQuantity) {
 		this.orderItemId = orderItemId;
+		this.itemQuantity = itemQuantity;
+	
+	}
+	public ItemOrders(Long itemQuantity) {
 		this.itemQuantity = itemQuantity;
 	
 	}
