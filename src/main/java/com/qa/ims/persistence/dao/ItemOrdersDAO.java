@@ -136,23 +136,29 @@ public class ItemOrdersDAO implements Dao<ItemOrders>{
 		return 0;
 	}
 	
+	
+	
+	
+	
+	// To return items of a single order by inputing order id
+	
 	public ItemOrders read2(ItemOrders itemorders) {
-		try (Connection connection = DBUtils.getInstance().getConnection();
-			
-			PreparedStatement statement = connection.prepareStatement("SELECT * FROM order_items WHERE order_id = ?");) {
-			statement.setLong(1, itemorders.getOrderId());
-//			ResultSet resultset = statement.executeQuery();
-//			while (resultset.next()) {
-//				LOGGER.info(resultset);
+//		try (Connection connection = DBUtils.getInstance().getConnection();
+//			
+//			PreparedStatement statement = connection.prepareStatement("SELECT * FROM order_items WHERE order_id = ?");) {
+//			statement.setLong(1, itemorders.getOrderId());
+////			ResultSet resultset = statement.executeQuery();
+////			while (resultset.next()) {
+////				LOGGER.info(resultset);
+////			}
+//			try (ResultSet resultSet = statement.executeQuery();) {
+//				resultSet.next();
+//				return modelFromResultSet(resultSet);
 //			}
-			try (ResultSet resultSet = statement.executeQuery();) {
-				resultSet.next();
-				return modelFromResultSet(resultSet);
-			}
-		} catch (Exception e) {
-			LOGGER.debug(e);
-			LOGGER.error(e.getMessage());
-		}
+//		} catch (Exception e) {
+//			LOGGER.debug(e);
+//			LOGGER.error(e.getMessage());
+//		}
 		return null;
 	}
 
