@@ -1,12 +1,11 @@
 package com.qa.ims.persistence.domain;
 
-import java.util.Objects;
 
 public class Item {
 
 	private Long itemId;
 	private String itemName;
-	private Double price;
+	private Long price;
 	
 	
 	// Default 	
@@ -15,7 +14,7 @@ public class Item {
 	}
 
 
-	public Item(Long itemId, String itemName, Double price) {
+	public Item(Long itemId, String itemName, Long price) {
 		super();
 		this.itemId = itemId;
 		this.itemName = itemName;
@@ -23,7 +22,7 @@ public class Item {
 	}
 
 
-	public Item(String itemName, Double price) {
+	public Item(String itemName, Long price) {
 		super();
 		this.itemName = itemName;
 		this.price = price;
@@ -71,7 +70,7 @@ public class Item {
 	/**
 	 * @return the price
 	 */
-	public Double getPrice() {
+	public Long getPrice() {
 		return price;
 	}
 
@@ -79,14 +78,19 @@ public class Item {
 	/**
 	 * @param price the price to set
 	 */
-	public void setPrice(Double price) {
+	public void setPrice(Long price) {
 		this.price = price;
 	}
 
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(itemId, itemName, price);
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((itemId == null) ? 0 : itemId.hashCode());
+		result = prime * result + ((itemName == null) ? 0 : itemName.hashCode());
+		result = prime * result + ((price == null) ? 0 : price.hashCode());
+		return result;
 	}
 
 
