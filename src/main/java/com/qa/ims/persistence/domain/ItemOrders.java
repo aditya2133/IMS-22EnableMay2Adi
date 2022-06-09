@@ -8,6 +8,7 @@ public class ItemOrders {
 	private Long orderId;
 	private Long itemId;
 	private Long itemQuantity;
+	private Long itemTotal;
 	
 	
 	public ItemOrders() {
@@ -23,12 +24,22 @@ public class ItemOrders {
 	}
 
 
+	public ItemOrders(Long orderItemId, Long orderId, Long itemId, Long itemQuantity, Long itemTotal) {
+		super();
+		this.orderItemId = orderItemId;
+		this.orderId = orderId;
+		this.itemId = itemId;
+		this.itemQuantity = itemQuantity;
+		this.itemTotal=itemTotal;
+	}
+
 	public ItemOrders(Long orderItemId, Long orderId, Long itemId, Long itemQuantity) {
 		super();
 		this.orderItemId = orderItemId;
 		this.orderId = orderId;
 		this.itemId = itemId;
 		this.itemQuantity = itemQuantity;
+		
 	}
 
 
@@ -42,6 +53,20 @@ public class ItemOrders {
 	
 	}
 
+	/**
+	 * @return the itemTotal
+	 */
+	public Long getItemTotal() {
+		return itemTotal;
+	}
+
+
+	/**
+	 * @param itemTotal the itemTotal to set
+	 */
+	public void setItemTotal(Long itemTotal) {
+		this.itemTotal = itemTotal;
+	}
 
 	/**
 	 * @return the orderItemId
@@ -110,13 +135,13 @@ public class ItemOrders {
 	@Override
 	public String toString() {
 		return "ItemOrders [orderItemId=" + orderItemId + ", orderId=" + orderId + ", itemId=" + itemId
-				+ ", itemQuantity=" + itemQuantity + "]";
+				+ ", itemQuantity=" + itemQuantity + ", itemTotal=" + itemTotal + "]";
 	}
 
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(itemId, itemQuantity, orderId, orderItemId);
+		return Objects.hash(itemId, itemQuantity, itemTotal, orderId, orderItemId);
 	}
 
 
@@ -132,8 +157,9 @@ public class ItemOrders {
 			return false;
 		}
 		ItemOrders other = (ItemOrders) obj;
-		return Objects.equals(itemId, other.itemId) && itemQuantity == other.itemQuantity
-				&& Objects.equals(orderId, other.orderId) && Objects.equals(orderItemId, other.orderItemId);
+		return Objects.equals(itemId, other.itemId) && Objects.equals(itemQuantity, other.itemQuantity)
+				&& Objects.equals(itemTotal, other.itemTotal) && Objects.equals(orderId, other.orderId)
+				&& Objects.equals(orderItemId, other.orderItemId);
 	}
 	
 	
