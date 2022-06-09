@@ -54,6 +54,12 @@ public class OrderController implements CrudController<Order> {
 		return orderDAO.delete(id);		
 		
 	}
+
+	@Override
+	public Order read2(Long t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 
