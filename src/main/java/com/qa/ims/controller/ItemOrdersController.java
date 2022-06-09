@@ -33,16 +33,16 @@ public class ItemOrdersController implements CrudController<ItemOrders> {
 
 	
 	public ItemOrders read2(Long orderId) {
-		LOGGER.info("Please enter order ID");
-		Long orderID = utils.getLong();
-
-		ItemOrders ito = itoDAO.read2(new ItemOrders(orderID));
-		LOGGER.info(ito);
-//		List<ItemOrders> itemorders = itoDAO.read(orderId);
-//		for (ItemOrders itemorder : itemorders) {
-//			LOGGER.info(itemorder);
-//		}
-		return ito;
+//		LOGGER.info("Please enter order ID");
+//		Long orderID = utils.getLong();
+//
+//		ItemOrders ito = itoDAO.read2(new ItemOrders(orderID));
+//		LOGGER.info(ito);
+////		List<ItemOrders> itemorders = itoDAO.read(orderId);
+////		for (ItemOrders itemorder : itemorders) {
+////			LOGGER.info(itemorder);
+////		}
+		return null; //ito;
 	}
 
 	@Override
