@@ -64,4 +64,10 @@ public class ItemController implements CrudController<Item> {
 		return itemDAO.delete(itemId);
 	}
 
+	@Override
+	public Item read2(Long t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
