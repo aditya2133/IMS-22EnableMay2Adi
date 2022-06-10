@@ -1,4 +1,4 @@
-INSERT INTO customers Values (1, 'Adi', 'Pan'),(2, 'Sam', 'Noll'),(3, 'Kate', 'Hund'),(4, 'Chris', 'Hem');
+INSERT INTO customers(customer_id, first_name, surname) Values (1, 'Adi', 'Pan'),(2, 'Sam', 'Noll'),(3, 'Kate', 'Hund'),(4, 'Chris', 'Hem');
 
 INSERT INTO items Values(1, 'Bat', 40), (2, 'Ball', 13), (3, 'stumps', 15), (4, 'helmet', 40);
 
