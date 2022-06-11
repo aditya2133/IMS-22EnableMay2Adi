@@ -7,13 +7,9 @@ The product creates and maintains a database for a store's items and orders, as 
 
 This particular project was forked from the initial work of Chris Perrins and then further developed.
 
-A Scrum and sprints were created using Jira. The link is given below.
-https://aditya-pande.atlassian.net/jira/software/projects/AW5P/boards/2/roadmap
-
-
 ### Prerequisites
 
-Prerequisites include a machine with a programme capable of running java or cmd, a db management system, Maven installation as well as the required dependancies.
+Prerequisites incluide a machine with a programme capable of running java or cmd, a db management system, Maven installation as well as the required dependancies.
 
 The dependecies in for this project have been included in the pom (as well as below) and can be found in the mvn repos.
 
