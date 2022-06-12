@@ -106,6 +106,16 @@ Mockito for testing the codes within the Controllers packages using mock objects
 ```
 Give an example
 ```
+DAO tests are not working: 
+Not able to find the tables - the catch error gets covered in the coverage - Assumed that either a problem in connection or creation of tables as the catch blocks are tested:
+Tried and searched for :
+- syntax error 
+- connection error 
+- read problem for .sql files - couldnt find any possible solution
+- tried creating different try-catch blocks to throw errors, but didnt work
+- checked for spelling errors
+- checked buildpaths and missing dependancies
+- 
 
 ### Integration Tests 
 Explain what these tests test, why and how to run them
