@@ -7,9 +7,13 @@ The product creates and maintains a database for a store's items and orders, as 
 
 This particular project was forked from the initial work of Chris Perrins and then further developed.
 
+A Scrum and sprints were created using Jira. The link is given below.
+https://aditya-pande.atlassian.net/jira/software/projects/AW5P/boards/2/roadmap
+
+
 ### Prerequisites
 
-Prerequisites incluide a machine with a programme capable of running java or cmd, a db management system, Maven installation as well as the required dependancies.
+Prerequisites include a machine with a programme capable of running java or cmd, a db management system, Maven installation as well as the required dependancies.
 
 The dependecies in for this project have been included in the pom (as well as below) and can be found in the mvn repos.
 
@@ -102,6 +106,16 @@ Mockito for testing the codes within the Controllers packages using mock objects
 ```
 Give an example
 ```
+DAO tests are not working: 
+Not able to find the tables - the catch error gets covered in the coverage - Assumed that either a problem in connection or creation of tables as the catch blocks are tested:
+Tried and searched for :
+- syntax error 
+- connection error 
+- read problem for .sql files - couldnt find any possible solution
+- tried creating different try-catch blocks to throw errors, but didnt work
+- checked for spelling errors
+- checked buildpaths and missing dependancies
+- 
 
 ### Integration Tests 
 Explain what these tests test, why and how to run them
