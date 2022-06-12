@@ -71,7 +71,7 @@ public class CustomerDAO implements Dao<Customer> {
 	public Customer create(Customer customer) {
 		try (Connection connection = DBUtils.getInstance().getConnection();
 				PreparedStatement statement = connection
-						.prepareStatement("INSERT INTO customers(first_name, surname) VALUES (?, ?)");) {
+						.prepareStatement("INSERT INTO customers (first_name, surname) VALUES (?, ?)");) {
 			statement.setString(1, customer.getFirstName());
 			statement.setString(2, customer.getSurname());
 			statement.executeUpdate();

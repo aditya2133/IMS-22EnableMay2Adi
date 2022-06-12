@@ -1,18 +1,17 @@
+CREATE SCHEMA IF NOT EXISTS  testdb  AUTHORIZATION ownerUserName sa;
+
 DROP TABLE IF EXISTS order_items;
-
 DROP TABLE IF EXISTS orders;
-
 DROP TABLE IF EXISTS items;
-
 DROP TABLE IF EXISTS customers;
 
 
 
 CREATE TABLE IF NOT EXISTS customers (
-`customer_id` Long UNIQUE NOT NULL AUTO_INCREMENT,
-`first_name` VARCHAR(40) DEFAULT NULL,
-`surname` VARCHAR(40) DEFAULT NULL,
-PRIMARY KEY (`customer_id`)
+customer_id LONG UNIQUE NOT NULL AUTO_INCREMENT,
+first_name VARCHAR(40) DEFAULT NULL,
+surname VARCHAR(40) DEFAULT NULL,
+PRIMARY KEY (customer_id)
 );
 
 
